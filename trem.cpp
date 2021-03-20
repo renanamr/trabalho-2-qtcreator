@@ -1,12 +1,14 @@
 #include "trem.h"
 #include <QtCore>
 
+#define MAX_SPEED 200
+
 //Construtor
-Trem::Trem(int ID, int x, int y){
+Trem::Trem(int ID, int x, int y, int velocidade){
     this->ID = ID;
     this->x = x;
     this->y = y;
-    velocidade = 100;
+    this->velocidade = MAX_SPEED - velocidade;
 }
 
 //Função a ser executada após executar trem->START
@@ -71,12 +73,12 @@ void Trem::run(){
         default:
             break;
         }
-        msleep(velocidade);
+        msleep(this->velocidade);
     }
 }
 
 void Trem::mudarVelocidade(int velocidade) {
-    msleep(velocidade);
+    this->velocidade = MAX_SPEED - velocidade;
 }
 
 

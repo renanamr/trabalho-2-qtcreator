@@ -9,11 +9,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     //Cria o trem com seu (ID, posição X, posição Y)
-    trem1 = new Trem(1,130,30);
-    trem2 = new Trem(2,330,30);
-    trem3 = new Trem(3,530,30);
-    trem4 = new Trem(4,230,150);
-    trem5 = new Trem(5,430,150);
+    trem1 = new Trem(1,130,30, ui->speed_trem1->value());
+    trem2 = new Trem(2,330,30, ui->speed_trem2->value());
+    trem3 = new Trem(3,530,30, ui->speed_trem3->value());
+    trem4 = new Trem(4,230,150, ui->speed_trem4->value());
+    trem5 = new Trem(5,430,150, ui->speed_trem5->value());
 
     /*
      * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.
@@ -83,7 +83,28 @@ void MainWindow::on_pushButton_2_clicked()
     trem5->terminate();
 }
 
-void MainWindow::on_speed_trem1_sliderMoved(int position)
+
+void MainWindow::on_speed_trem1_valueChanged(int value)
 {
-    trem1->mudarVelocidade(position);
+    trem1->mudarVelocidade(value);
+}
+
+void MainWindow::on_speed_trem2_valueChanged(int value)
+{
+    trem2->mudarVelocidade(value);
+}
+
+void MainWindow::on_speed_trem3_valueChanged(int value)
+{
+    trem3->mudarVelocidade(value);
+}
+
+void MainWindow::on_speed_trem4_valueChanged(int value)
+{
+    trem4->mudarVelocidade(value);
+}
+
+void MainWindow::on_speed_trem5_valueChanged(int value)
+{
+    trem5->mudarVelocidade(value);
 }

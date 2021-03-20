@@ -27,7 +27,17 @@ private slots:
 
     void on_speed_trem1_rangeChanged(int min, int max);
 
-    void on_speed_trem1_sliderMoved(int position);
+    void on_speed_trem1_valueChanged(int value);
+
+    void on_speed_trem2_valueChanged(int value);
+
+    void on_speed_trem3_valueChanged(int value);
+
+    void on_speed_trem4_valueChanged(int value);
+
+    void on_speed_trem5_valueChanged(int value);
+
+    void on_speed_trem5_actionTriggered(int action);
 
 private:
     Ui::MainWindow *ui;
