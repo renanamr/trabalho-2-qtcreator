@@ -108,3 +108,112 @@ void MainWindow::on_speed_trem5_valueChanged(int value)
 {
     trem5->mudarVelocidade(value);
 }
+
+
+
+
+bool progressTrem1(int x, int y){
+    if(x==310 && y==30){
+        //Solicita linha 1
+    }
+    if(x==330 && y==150){
+        //Solicita linha 3
+    }
+    if(x==310 && y==150){
+        //Libera linha 1
+    }
+    if(x==210 && y==150){
+        //Libera linha 3
+    }
+}
+
+bool progressTrem2(int x, int y){
+    if(x==530 && y==30){
+        //Solicita linha 2
+    }
+    if(x==530 && y==150){
+        //Solicita linha 5
+    }
+    if(x==430 && y==150){
+        //Solicita linha 4
+    }
+    if(x==330 && y==150){
+        //Solicita linha 1
+    }
+
+    if(x==510 && y==150){
+        //Libera linha 2
+    }
+    if(x==410 && y==150){
+        //Libera linha 5
+    }
+    if(x==330 && y==130){
+        //Libera linha 4
+    }
+    if(x==350 && y==30){
+        //Libera linha 1
+    }
+}
+
+bool progressTrem3(int x, int y){
+    if(x==530 && y==150){
+        //Solicita linha 2
+    }
+    if(x==630 && y==150){
+        //Solicita linha 6
+    }
+    if(x==550 && y==30){
+        //Libera linha 2
+    }
+    if(x==530 && y==130){
+        //Libera linha 6
+    }
+}
+
+
+bool progressTrem4(int x, int y){
+    if(x==230 && y==170){
+        //Solicita linha 3
+    }
+    if(x==330 && y==150){
+        //Solicita linha 4
+    }
+    if(x==430 && y==150){
+        //Solicita linha 7
+    }
+
+
+    if(x==350 && y==150){
+        //Libera linha 3
+    }
+    if(x==430 && y==170){
+        //Libera linha 4
+    }
+    if(x==410 && y==270){
+        //Libera linha 7
+    }
+}
+
+
+bool progressTrem5(int x, int y){
+    if(x==430 && y==150){
+        //Solicita linha 5
+    }
+    if(x==530 && y==150){
+        //Solicita linha 6
+    }
+    if(x==430 && y==270){
+        //Solicita linha 7
+    }
+
+
+    if(x==550 && y==150){
+        //Libera linha 5
+    }
+    if(x==630 && y==170){
+        //Libera linha 6
+    }
+    if(x==450 && y==150){
+        //Libera linha 7
+    }
+}
